@@ -43,7 +43,7 @@ const about = {
   imageSize: 375,
   message:
     "My name is Minchae Kim.",
-  resume: "https://docs.google.com/document/d/13_PWdhThMr6roxb-UFiJj4YAFOj8e_bv3Vx9UHQdyBQ/edit?usp=sharing",
+  resume: process.env.PUBLIC_URL + "/CV_MinchaeKim.pdf",
 };
 
 // PROJECTS SECTION
