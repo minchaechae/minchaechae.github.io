@@ -12,12 +12,12 @@ const mainBody = {
   message: " Passionate about changing the world with technology. ",
   icons: [
     {
-      image: "fa-github",
-      url: "https://github.com/minchaechae",
-    },
-    {
       image: "fa-linkedin",
       url: "https://www.linkedin.com/in/minchae-kim-374ba92b1/",
+    },
+    {
+      image: "fa-github",
+      url: "https://github.com/minchaechae",
     }
   ],
 };
