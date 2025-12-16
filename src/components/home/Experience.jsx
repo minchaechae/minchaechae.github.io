@@ -22,7 +22,14 @@ const Experience = () => {
                   <li key={index} className="mb-4">
                     <Row className="align-items-start">
                       
-                      <Col xs={4} md={3} lg="auto" className="text-md-right pt-1">
+                      {/* [수정 포인트 1] 모바일 레이아웃 변경 */}
+                      {/* xs={12} : 모바일에서는 한 줄 전체 차지 (위로 감) */}
+                      {/* md={3}, lg="auto" : PC에서는 기존대로 왼쪽 배치 */}
+                      {/* mb-2 mb-md-0 : 모바일에서만 날짜 아래에 여백 추가 */}
+                      <Col 
+                        xs={12} md={3} lg="auto" 
+                        className="text-left text-md-right pt-1 mb-2 mb-md-0"
+                      >
                         <span 
                            className="badge text-white py-2 rounded-pill" 
                            style={{ 
@@ -37,7 +44,10 @@ const Experience = () => {
                         </span>
                       </Col>
 
-                      <Col xs={8} md={9} lg={true} className="pl-md-3 border-left-0">
+                      {/* [수정 포인트 2] 내용 영역 */}
+                      {/* xs={12} : 모바일에서는 한 줄 전체 차지 (아래로 내려감) */}
+                      {/* pl-md-3 : PC에서만 왼쪽에 여백을 줌 (모바일은 줄바꿈 됐으니 여백 필요 없음) */}
+                      <Col xs={12} md={9} lg={true} className="pl-0 pl-md-3 border-left-0">
                         <p style={{ fontSize: "1.05rem", color: "#333", margin: 0, lineHeight: "1.7", wordBreak: "keep-all" }}>
                           {item.role}
                         </p>
