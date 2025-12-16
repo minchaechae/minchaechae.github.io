@@ -19,7 +19,7 @@ const Updates = () => {
             <div className="bg-white p-4 p-md-5 rounded shadow-sm border-0">
               <ul className="list-unstyled m-0">
                 {updates.data.map((item, index) => (
-                  <li key={index} className="mb-4">
+                  <li key={index} className="mb-2">
                     <Row className="align-items-start">
     
                       <Col xs={4} md={3} lg={2} className="text-md-right pt-1">

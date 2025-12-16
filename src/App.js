@@ -9,7 +9,8 @@ import {
   skills,
   getInTouch,
   experiences,
-  updates
+  updates,
+  projects
 } from "./editable-stuff/config.js";
 import MainBody from "./components/home/MainBody";
 import AboutMe from "./components/home/AboutMe";
@@ -52,12 +53,10 @@ const Home = React.forwardRef((props, ref) => {
           <Experience experiences={experiences}/>
         )
       }
-      {repos.show && (
+      {projects.show && (
         <Project
-          heading={repos.heading}
-          username={repos.gitHubUsername}
-          length={repos.reposLength}
-          specfic={repos.specificRepos}
+          heading={projects.heading}
+          data={projects.data}
         />
       )}
       {leadership.show && (

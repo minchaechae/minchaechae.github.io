@@ -54,6 +54,33 @@ const updates = {
       date: "Aug 2025",
       text: "Poster accepted at IEEE ISMAR 2025: \"JourneyVR: Experience Design for Continuous Timed Activities in Virtual Reality.\"",
     },
+    {
+      date: "Jan 2025",
+      text: "Paper accepted at Springer Virtual Reality: \"BalanceVR: Balance Training to Increase Tolerance to Cybersickness in Immersive Virtual Reality.\"",
+    },
+  ],
+};
+
+const projects = {
+  show: true, 
+  heading: "Projects",
+  data: [
+    {
+      title: "JourneyVR: Experience Design for Continuous Timed Activities in Virtual Reality",
+      authors: "Minchae Kim, Yechan Yang, Gerard Jounghyun Kim",
+      venue: "IEEE ISMAR 2025",
+      image: require("../assets/img/journeyvr-poster.png"),
+      paperLink: "https://www.computer.org/csdl/proceedings-article/ismar-adjunct/2025/934700a799/2bKcXdMtC4U", 
+      buttonText: "Poster"
+    },
+    {
+      title: "BalanceVR: Balance Training to Increase Tolerance to Cybersickness in Immersive Virtual Reality",
+      authors: "Yechan Yang, Seonghoon Kang, Minchae Kim, Gerard Jounghyun Kim, Hanseob Kim",
+      venue: "Springer Virtual Reality",
+      image: require("../assets/img/balancevr.png"),
+      paperLink: "https://link.springer.com/article/10.1007/s10055-024-01097-7",
+      buttonText: "Paper"
+    },
   ],
 };
 
@@ -64,7 +91,7 @@ const updates = {
 //      i.e ["repository-1", "repo-2"]
 const repos = {
   show: false,
-  heading: "Recent Projects",
+  heading: "Projects",
   gitHubUsername: "hashirshoaeb", //i.e."johnDoe12Gh"
   reposLength: 4,
   specificRepos: [],
@@ -130,7 +157,7 @@ const getInTouch = {
 };
 
 const experiences = {
-  show: true,
+  show: false,
   heading: "Experiences",
   data: [
     {
@@ -145,4 +172,4 @@ const experiences = {
 //   show: false,
 // };
 
-export { navBar, mainBody, about, repos, skills, leadership, getInTouch, experiences, updates };
+export { navBar, mainBody, about, repos, skills, leadership, getInTouch, experiences, updates, projects };
