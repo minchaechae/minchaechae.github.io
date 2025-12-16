@@ -1,16 +1,18 @@
 {
   "files": {
     "main.css": "/static/css/main.fe927caf.css",
-    "main.js": "/static/js/main.ad2cbeb4.js",
+    "main.js": "/static/js/main.c6ad7535.js",
     "static/js/787.4b24f717.chunk.js": "/static/js/787.4b24f717.chunk.js",
+    "static/media/journeyvr-poster.png": "/static/media/journeyvr-poster.9aeddbb1e4d9fa9709a3.png",
     "static/media/minchae.png": "/static/media/minchae.f2b74ca8f818287ddfcb.png",
+    "static/media/balancevr.png": "/static/media/balancevr.15638a0b616363a2b9ea.png",
     "index.html": "/index.html",
     "main.fe927caf.css.map": "/static/css/main.fe927caf.css.map",
-    "main.ad2cbeb4.js.map": "/static/js/main.ad2cbeb4.js.map",
+    "main.c6ad7535.js.map": "/static/js/main.c6ad7535.js.map",
     "787.4b24f717.chunk.js.map": "/static/js/787.4b24f717.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.fe927caf.css",
-    "static/js/main.ad2cbeb4.js"
+    "static/js/main.c6ad7535.js"
   ]
 }
