@@ -8,10 +8,12 @@ import {
   leadership,
   skills,
   getInTouch,
-  experiences
+  experiences,
+  updates
 } from "./editable-stuff/config.js";
 import MainBody from "./components/home/MainBody";
 import AboutMe from "./components/home/AboutMe";
+import Updates from "./components/home/Updates";
 import Project from "./components/home/Project";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
@@ -41,6 +43,9 @@ const Home = React.forwardRef((props, ref) => {
           imgSize={about.imageSize}
           resume={about.resume}
         />
+      )}
+      {updates.show && (
+         <Updates />
       )}
       {
         experiences.show && (
@@ -86,7 +91,7 @@ const App = () => {
       </Routes>
       {/* {false && <Route path="/blog" exact component={Blog} />}
       {false && <Route path="/blog/:id" component={BlogPost} />} */}
-      <Footer>
+      {/* <Footer>
         {getInTouch.show && (
           <GetInTouch
             heading={getInTouch.heading}
@@ -94,7 +99,7 @@ const App = () => {
             email={getInTouch.email}
           />
         )}
-      </Footer>
+      </Footer> */}
     </BrowserRouter>
   );
 };

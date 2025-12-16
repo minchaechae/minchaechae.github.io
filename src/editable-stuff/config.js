@@ -9,15 +9,11 @@ const mainBody = {
   firstName: "Minchae",
   middleName: "",
   lastName: "Kim",
-  message: " Passionate about changing the world with technology. ",
+  message: " Passionate about bridging the physical and virtual worlds. ",
   icons: [
     {
       image: "fa-linkedin",
       url: "https://www.linkedin.com/in/minchae-kim-374ba92b1/",
-    },
-    {
-      image: "fa-github",
-      url: "https://github.com/minchaechae",
     }
   ],
 };
@@ -42,8 +38,23 @@ const about = {
   imageLink: require("../editable-stuff/minchae.png"),
   imageSize: 375,
   message:
-    "Currently under construction",
+    "I'm a Master's student in Computer Science at Korea University, advised by Professor Gerard Jounghyun Kim at the Digital Experience Lab. My primary research interests lie in Human-Computer Interaction (HCI) and Extended Reality (XR), with a focus on bridging the gap between physical and virtual environments through seamless cross-reality experiences.",
   resume: process.env.PUBLIC_URL + "/CV_MinchaeKim.pdf",
+};
+
+const updates = {
+  show: true,
+  heading: "Updates",
+  data: [
+    {
+      date: "Dec 2025",
+      text: "Successfully defended my Master's thesis, \"JourneyVR: Designing for Continuous Workflow Experience in Virtual Reality.\"",
+    },
+    {
+      date: "Aug 2025",
+      text: "Poster accepted at IEEE ISMAR 2025: \"JourneyVR: Experience Design for Continuous Timed Activities in Virtual Reality.\"",
+    },
+  ],
 };
 
 // PROJECTS SECTION
@@ -119,18 +130,12 @@ const getInTouch = {
 };
 
 const experiences = {
-  show: false,
+  show: true,
   heading: "Experiences",
   data: [
     {
-      role: 'Software Engineer',// Here Add Company Name
-      companylogo: require('../assets/img/dell.png'),
-      date: 'June 2018 – Present',
-    },
-    {
-      role: 'Front-End Developer',
-      companylogo: require('../assets/img/boeing.png'),
-      date: 'May 2017 – May 2018',
+      role: 'Graduate Research Assistant | Digital Experience Lab',// Here Add Company Name
+      date: 'Mar 2024 – Present',
     },
   ]
 }
@@ -140,4 +145,4 @@ const experiences = {
 //   show: false,
 // };
 
-export { navBar, mainBody, about, repos, skills, leadership, getInTouch, experiences };
+export { navBar, mainBody, about, repos, skills, leadership, getInTouch, experiences, updates };
