@@ -1,0 +1,103 @@
+<section id="publications" class="py-24 bg-white">
+  <div class="mx-auto max-w-5xl px-6">
+
+    <div class="fade-up">
+      <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-slate-900 mb-10">
+        Publications
+        <span class="block mt-1.5 w-12 h-1 rounded-full bg-accent-400"></span>
+      </h2>
+    </div>
+
+    <div class="space-y-4 stagger-children">
+      {% for pub in site.data.publications %}
+      <article class="animate fade-up relative flex gap-0 rounded-2xl border border-slate-100 bg-white shadow-sm overflow-hidden">
+
+        <!-- Thumbnail -->
+        <div class="flex-shrink-0 w-36 md:w-48 self-stretch overflow-hidden"
+             data-thumb-container
+             data-pub-title="{{ pub.title | escape }}">
+          {% if pub.thumbnail and pub.thumbnail != "" %}
+          <img data-thumb
+               src="{{ pub.thumbnail }}"
+               alt="{{ pub.title | escape }}"
+               class="w-full h-full object-contain" />
+          {% endif %}
+          <div class="thumb-fallback hidden w-full h-full flex items-center justify-center text-white/60">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+            </svg>
+          </div>
+        </div>
+
+        <!-- Content -->
+        <div class="flex-1 min-w-0 p-5">
+          <!-- Year badge -->
+          <span class="inline-block text-xs font-semibold text-accent-600 bg-accent-50 border border-accent-100 rounded-md px-2 py-0.5 mb-2">
+            {{ pub.year }}
+          </span>
+
+          <h3 class="font-semibold text-slate-900 leading-snug mb-2" style="font-size: 0.95rem;">
+            {{ pub.title }}
+          </h3>
+
+          <!-- Authors: **name** → bold, rendered by JS -->
+          <p class="text-sm text-slate-500 mb-1.5" data-authors="{{ pub.authors | escape }}"></p>
+
+          <!-- Venue -->
+          <p class="text-sm text-slate-500 italic mb-3">{{ pub.venue }}</p>
+
+          <!-- Links -->
+          <div class="flex gap-2 flex-wrap">
+            {% if pub.paper and pub.paper != "" %}
+            <a href="{{ pub.paper }}" target="_blank" rel="noreferrer"
+              class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-slate-200 text-slate-600 text-xs font-medium hover:border-accent-300 hover:text-accent-700 hover:bg-accent-50 transition-all duration-200 shadow-sm hover:shadow">
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+              Paper
+            </a>
+            {% endif %}
+
+            {% if pub.poster and pub.poster != "" %}
+            <a href="{{ pub.poster }}" target="_blank" rel="noreferrer"
+              class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-slate-200 text-slate-600 text-xs font-medium hover:border-accent-300 hover:text-accent-700 hover:bg-accent-50 transition-all duration-200 shadow-sm hover:shadow">
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+              Poster
+            </a>
+            {% endif %}
+
+            {% if pub.code and pub.code != "" %}
+            <a href="{{ pub.code }}" target="_blank" rel="noreferrer"
+              class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-slate-200 text-slate-600 text-xs font-medium hover:border-accent-300 hover:text-accent-700 hover:bg-accent-50 transition-all duration-200 shadow-sm hover:shadow">
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+              </svg>
+              Code
+            </a>
+            {% endif %}
+
+            {% if pub.project and pub.project != "" %}
+            <a href="{{ pub.project }}" target="_blank" rel="noreferrer"
+              class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-slate-200 text-slate-600 text-xs font-medium hover:border-accent-300 hover:text-accent-700 hover:bg-accent-50 transition-all duration-200 shadow-sm hover:shadow">
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+              </svg>
+              Project
+            </a>
+            {% endif %}
+          </div>
+
+        </div><!-- content -->
+      </article>
+      {% endfor %}
+    </div>
+
+  </div>
+</section>

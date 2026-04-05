@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico?v=2" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="{{ site.description }}" />
+    <meta name="author" content="{{ site.data.profile.name }}" />
+    <meta property="og:title" content="{{ site.data.profile.name }}" />
+    <meta property="og:description" content="{{ site.data.profile.role }}" />
+    <meta property="og:type" content="website" />
+    <title>{{ page.title | default: site.title }}</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Tailwind CSS CDN with custom config -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+            },
+            colors: {
+              accent: {
+                50:  '#fff4f3',
+                100: '#ffe8e6',
+                200: '#ffd0cc',
+                300: '#ffaa9e',
+                400: '#ff8070',
+                500: '#ff6f61',
+                600: '#e85444',
+                700: '#c73d2e',
+                800: '#a33226',
+                900: '#862b20',
+              },
+            },
+          },
+        },
+      }
+    </script>
+
+    <!-- Custom styles -->
+    <style>
+      html {
+        scroll-behavior: smooth;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      body {
+        font-family: Inter, system-ui, -apple-system, sans-serif;
+      }
+      ::selection {
+        background: #ffe8e6;
+        color: #862b20;
+      }
+
+      /* Scroll animations */
+      .fade-up {
+        opacity: 0;
+        transform: translateY(24px);
+        transition: opacity 0.6s ease, transform 0.6s ease;
+      }
+      .fade-up.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .fade-in {
+        opacity: 0;
+        transition: opacity 0.7s ease;
+      }
+      .fade-in.visible {
+        opacity: 1;
+      }
+
+      /* Staggered children delays */
+      .stagger-children > *:nth-child(1) { transition-delay: 0ms;   }
+      .stagger-children > *:nth-child(2) { transition-delay: 80ms;  }
+      .stagger-children > *:nth-child(3) { transition-delay: 160ms; }
+      .stagger-children > *:nth-child(4) { transition-delay: 240ms; }
+      .stagger-children > *:nth-child(5) { transition-delay: 320ms; }
+      .stagger-children > *:nth-child(6) { transition-delay: 400ms; }
+
+      /* Navbar scrolled state */
+      #site-header.scrolled {
+        background-color: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        box-shadow: 0 1px 2px 0 rgba(0,0,0,0.05);
+        border-bottom: 1px solid #f1f5f9;
+      }
+
+      /* Custom scrollbar */
+      ::-webkit-scrollbar { width: 6px; }
+      ::-webkit-scrollbar-track { background: #f8fafc; }
+      ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 3px; }
+      ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+    </style>
+  </head>
+
+  <body class="bg-white text-slate-800 min-h-screen flex flex-col">
+
+    {% include navbar.html %}
+
+    <main class="flex-1 pt-16">
+      {{ content }}
+    </main>
+
+    {% include footer.html %}
+
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>

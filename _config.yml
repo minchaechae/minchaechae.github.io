@@ -1,0 +1,22 @@
+title: Minchae Kim
+description: "Personal academic website of Minchae Kim — Incoming PhD Student at Virginia Tech"
+url: "https://minchaechae.github.io"
+baseurl: ""
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+
+# Exclude non-Jekyll files from processing
+exclude:
+  - node_modules/
+  - src/
+  - dist/
+  - package.json
+  - package-lock.json
+  - vite.config.js
+  - tailwind.config.js
+  - postcss.config.js
+  - Gemfile
+  - Gemfile.lock
+  - README.md

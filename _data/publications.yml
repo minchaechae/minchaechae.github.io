@@ -1,0 +1,43 @@
+# authors: wrap your own name in **double asterisks** to bold it
+# thumbnail: path relative to site root (e.g. /publications/paper.png)
+# paper / poster / code / project: leave as "" to hide the button
+
+- title: "JourneyVR: Designing for Continuous Workflow Experience in Virtual Reality"
+  authors: "**Minchae Kim**, Jun Ryu, Yechan Yang, Gerard J. Kim"
+  venue: "ACM Conference on Human Factors in Computing Systems (CHI)"
+  year: 2026
+  paper: ""
+  poster: ""
+  code: ""
+  project: ""
+  thumbnail: "/publications/journeyvr paper.png"
+
+- title: "Quantifying Low-Level Motor Effects of Emotion: Validating Fitts' Law in Affective Contexts"
+  authors: "Dongyun Joo, Yunseo Chang, JongChan Park, Kyungseo Jung, **Minchae Kim**, Gerard J. Kim"
+  venue: "ACM Conference on Human Factors in Computing Systems (CHI)"
+  year: 2026
+  paper: ""
+  poster: ""
+  code: ""
+  project: ""
+  thumbnail: "/publications/quantifying.png"
+
+- title: "JourneyVR: Experience Design for Continuous Timed Activities in Virtual Reality"
+  authors: "**Minchae Kim**, Yechan Yang, Gerard J. Kim"
+  venue: "IEEE International Symposium on Mixed and Augmented Reality Adjunct (ISMAR-Adjunct)"
+  year: 2025
+  paper: ""
+  poster: "https://ieeexplore.ieee.org/abstract/document/11236323"
+  code: ""
+  project: ""
+  thumbnail: "/publications/journeyvr poster.png"
+
+- title: "BalanceVR: balance training to increase tolerance to cybersickness in immersive virtual reality."
+  authors: "Yechan Yang, Seonghoon Kang, **Minchae Kim**, Gerard J. Kim, Hanseob Kim"
+  venue: "Springer Virtual Reality"
+  year: 2025
+  paper: "https://link.springer.com/article/10.1007/s10055-024-01097-7"
+  poster: ""
+  code: ""
+  project: ""
+  thumbnail: "/publications/balancevr.png"
