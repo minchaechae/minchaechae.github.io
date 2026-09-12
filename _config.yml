@@ -1,5 +1,5 @@
 title: Minchae Kim
-description: "Personal academic website of Minchae Kim — Incoming PhD Student at Virginia Tech"
+description: "Personal academic website of Minchae Kim — PhD Student in Computer Science at Virginia Tech"
 url: "https://minchaechae.github.io"
 baseurl: ""
 
@@ -20,3 +20,7 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - README.md
+
+  - PRODUCT.md
+  - DESIGN.md
+  - skills-lock.json
